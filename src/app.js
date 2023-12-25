@@ -25,7 +25,8 @@ class App{
     }
     async connection(){
           try {
-            const MONGOURL=process.env.MONGODB_URL
+            const MONGOURL=process.env.MONGODB_URL_ON 
+            const MONGOURL_LOCAL=process.env.MONGODB_URL
             await mongoose.connect(`${MONGOURL}`)
             .then(()=>console.log({
                 message:"connected db now",
